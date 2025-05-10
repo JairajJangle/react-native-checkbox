@@ -121,8 +121,26 @@ MIT
 
 ---
 
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+## 🙏 Support the project
 
-Made with ❤️ for the React Native community.
+<p align="center" valign="center">
+  <a href="https://liberapay.com/FutureJJ/donate">
+    <img src="https://liberapay.com/assets/widgets/donate.svg" alt="LiberPay_Donation_Button" height="50" > 
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href=".github/assets/Jairaj_Jangle_Google_Pay_UPI_QR_Code.jpg">
+    <img src=".github/assets/upi.png" alt="Paypal_Donation_Button" height="50" >
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.paypal.com/paypalme/jairajjangle001/usd">
+    <img src=".github/assets/paypal_donate.png" alt="Paypal_Donation_Button" height="50" >
+  </a>
+</p>
 
-Heavily Inspired by React Native Paper's Checkbox.Android component.
+
+
+## ❤️ Thanks to 
+
+- Module built using [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+- Heavily Inspired by [React Native Paper's Checkbox.Android](https://callstack.github.io/react-native-paper/docs/components/Checkbox/CheckboxAndroid) component
+- Readme is edited using [Typora](https://typora.io/)
