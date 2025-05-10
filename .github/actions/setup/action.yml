@@ -9,13 +9,19 @@ runs:
       with:
         node-version-file: .nvmrc
 
-    - name: Setup Yarn
+    - name: Create temp .yarnrc.yml without yarnPath
       run: |
-        corepack enable
-        corepack prepare yarn@3.6.1 --activate
+        # Extract content from .yarnrc.yml but exclude the yarnPath line
+        grep -v "yarnPath:" .yarnrc.yml > .yarnrc.yml.tmp
+        mv .yarnrc.yml.tmp .yarnrc.yml
+      shell: bash
+
+    - name: Install Yarn
+      run: |
+        npm install -g yarn@3.6.1
       shell: bash
       
-    - name: Install Yarn plugins
+    - name: Create plugin directory and install plugins
       run: |
         mkdir -p .yarn/plugins
         yarn plugin import @yarnpkg/plugin-interactive-tools
