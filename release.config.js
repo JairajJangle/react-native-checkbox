@@ -3,21 +3,34 @@ module.exports = {
     'main',
     {
       name: 'beta',
-      prerelease: true, // Marks this as a prerelease channel
+      prerelease: true,
     },
   ],
   plugins: [
-    '@semantic-release/commit-analyzer', // Analyzes commits for version bumping
-    '@semantic-release/release-notes-generator', // Generates release notes
-    '@semantic-release/changelog', // Generates the changelog
+    [
+      '@semantic-release/commit-analyzer',
+      {
+        preset: 'angular',
+        releaseRules: [
+          { type: 'chore', scope: 'deps', release: 'patch' },
+          { type: 'chore', breaking: true, release: 'major' },
+          { type: 'chore', scope: 'breaking', release: 'major' },
+        ],
+        parserOpts: {
+          noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES'],
+        },
+      },
+    ],
+    '@semantic-release/release-notes-generator',
+    '@semantic-release/changelog',
     [
       '@semantic-release/npm',
       {
         npmPublish: true,
-        tag: 'beta', // Publishes with a 'beta' tag to npm
+        tag: 'beta',
       },
     ],
-    '@semantic-release/github', // Handles GitHub releases
+    '@semantic-release/github',
     [
       '@semantic-release/git',
       {
