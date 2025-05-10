@@ -57,8 +57,7 @@
   },
   "homepage": "https://github.com/JairajJangle/react-native-checkbox#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "provenance": true
+    "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^19.6.0",
