@@ -9,20 +9,28 @@ runs:
       with:
         node-version-file: .nvmrc
 
-    - name: Create temp .yarnrc.yml without yarnPath
+    # Use nodeLinker: node-modules for CI only
+    - name: Create temporary .yarnrc.yml for CI
       run: |
-        # Extract content from .yarnrc.yml but exclude the yarnPath line
-        grep -v "yarnPath:" .yarnrc.yml > .yarnrc.yml.tmp
-        mv .yarnrc.yml.tmp .yarnrc.yml
+        cat > .yarnrc.yml << EOF
+        nodeLinker: node-modules
+        nmHoistingLimits: workspaces
+
+        plugins:
+          - path: .yarn/plugins/@yarnpkg/plugin-interactive-tools.cjs
+            spec: "@yarnpkg/plugin-interactive-tools"
+          - path: .yarn/plugins/@yarnpkg/plugin-workspace-tools.cjs
+            spec: "@yarnpkg/plugin-workspace-tools"
+        EOF
       shell: bash
 
-    - name: Setup Yarn with Corepack
-      run: |
-        corepack enable
-        yarn set version 3.6.1
-      shell: bash
-      
-    - name: Create plugin directory and install plugins
+    # Use threeal/setup-yarn-action which handles Berry properly
+    - name: Setup Yarn Berry
+      uses: threeal/setup-yarn-action@v2.0.0
+      with:
+        version: 3.6.1
+
+    - name: Install plugins
       run: |
         mkdir -p .yarn/plugins
         yarn plugin import @yarnpkg/plugin-interactive-tools
@@ -44,7 +52,7 @@ runs:
           ${{ runner.os }}-yarn-
 
     - name: Install dependencies
-      run: yarn install --immutable
+      run: yarn install
       shell: bash
 
     - name: Save cache
