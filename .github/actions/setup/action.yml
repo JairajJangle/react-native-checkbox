@@ -16,9 +16,10 @@ runs:
         mv .yarnrc.yml.tmp .yarnrc.yml
       shell: bash
 
-    - name: Install Yarn
+    - name: Setup Yarn with Corepack
       run: |
-        npm install -g yarn@3.6.1
+        corepack enable
+        yarn set version 3.6.1
       shell: bash
       
     - name: Create plugin directory and install plugins
