@@ -9,11 +9,13 @@ runs:
       with:
         node-version-file: .nvmrc
 
-    # Copy original .yarnrc.yml but remove the yarnPath line
-    - name: Prepare Yarn config
+    # Create a minimal .yarnrc.yml without any plugin references
+    - name: Create minimal Yarn config
       run: |
-        grep -v "yarnPath:" .yarnrc.yml > .yarnrc.yml.tmp
-        mv .yarnrc.yml.tmp .yarnrc.yml
+        cat > .yarnrc.yml << EOF
+        nodeLinker: node-modules
+        nmHoistingLimits: workspaces
+        EOF
       shell: bash
 
     # Setup Corepack for proper Yarn version management
@@ -29,6 +31,21 @@ runs:
         mkdir -p .yarn/plugins
         yarn plugin import @yarnpkg/plugin-interactive-tools
         yarn plugin import @yarnpkg/plugin-workspace-tools
+      shell: bash
+
+    # Now update .yarnrc.yml to include the plugins
+    - name: Update Yarn config with plugins
+      run: |
+        cat > .yarnrc.yml << EOF
+        nodeLinker: node-modules
+        nmHoistingLimits: workspaces
+        
+        plugins:
+          - path: .yarn/plugins/@yarnpkg/plugin-interactive-tools.cjs
+            spec: "@yarnpkg/plugin-interactive-tools"
+          - path: .yarn/plugins/@yarnpkg/plugin-workspace-tools.cjs
+            spec: "@yarnpkg/plugin-workspace-tools"
+        EOF
       shell: bash
 
     - name: Restore cache
