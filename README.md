@@ -2,7 +2,7 @@
 
 A papery checkbox for react native
 
-![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) ![npm version](https://img.shields.io/badge/npm-v1.0.0-green.svg) ![platform](https://img.shields.io/badge/platform-ios%20%7C%20android%20%7C%20web-lightgrey.svg)
+![npm version](https://img.shields.io/badge/npm-v1.0.0-green.svg) ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) [![Workflow Status](https://github.com/JairajJangle/react-native-checkbox/actions/workflows/ci.yml/badge.svg)](https://github.com/JairajJangle/react-native-checkbox/actions/workflows/ci.yml) ![Android](https://img.shields.io/badge/-Android-555555?logo=android&logoColor=3DDC84) ![iOS](https://img.shields.io/badge/-iOS-555555?logo=apple&logoColor=white) ![Web](https://img.shields.io/badge/-Web-555555?logo=google-chrome&logoColor=0096FF)
 
 A beautiful, customizable, and animated checkbox component for React Native applications. This component works across iOS, Android, and Web platforms with smooth animations and accessibility support.
 
@@ -110,80 +110,6 @@ This component is built with accessibility in mind:
 - Proper role assignment (`checkbox`)
 - Correct states reported to screen readers
 - Live region updates for dynamic changes
-
-## Examples
-
-### All states
-
-```jsx
-import React from 'react';
-import { View, Text } from 'react-native';
-import { Checkbox } from 'react-native-animated-checkbox';
-
-export default function AllStates() {
-  return (
-    <View style={{ padding: 20 }}>
-      <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 10 }}>
-        <Checkbox status="unchecked" onPress={() => {}} />
-        <Text style={{ marginLeft: 8 }}>Unchecked</Text>
-      </View>
-      
-      <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 10 }}>
-        <Checkbox status="checked" onPress={() => {}} />
-        <Text style={{ marginLeft: 8 }}>Checked</Text>
-      </View>
-      
-      <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 10 }}>
-        <Checkbox status="indeterminate" onPress={() => {}} />
-        <Text style={{ marginLeft: 8 }}>Indeterminate</Text>
-      </View>
-      
-      <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-        <Checkbox status="checked" disabled onPress={() => {}} />
-        <Text style={{ marginLeft: 8 }}>Disabled</Text>
-      </View>
-    </View>
-  );
-}
-```
-
-### Different sizes
-
-```jsx
-import React from 'react';
-import { View } from 'react-native';
-import { Checkbox } from 'react-native-animated-checkbox';
-
-export default function DifferentSizes() {
-  return (
-    <View style={{ padding: 20, flexDirection: 'row', justifyContent: 'space-around' }}>
-      <Checkbox status="checked" size={16} onPress={() => {}} />
-      <Checkbox status="checked" size={24} onPress={() => {}} />
-      <Checkbox status="checked" size={32} onPress={() => {}} />
-      <Checkbox status="checked" size={48} onPress={() => {}} />
-    </View>
-  );
-}
-```
-
-### Custom colors
-
-```jsx
-import React from 'react';
-import { View } from 'react-native';
-import { Checkbox } from 'react-native-animated-checkbox';
-
-export default function CustomColors() {
-  return (
-    <View style={{ padding: 20, flexDirection: 'row', justifyContent: 'space-around' }}>
-      <Checkbox status="checked" color="#F44336" onPress={() => {}} />
-      <Checkbox status="checked" color="#4CAF50" onPress={() => {}} />
-      <Checkbox status="checked" color="#2196F3" onPress={() => {}} />
-      <Checkbox status="checked" color="#FF9800" onPress={() => {}} />
-    </View>
-  );
-}
-```
 
 ## Contributing
 
