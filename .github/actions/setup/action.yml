@@ -9,16 +9,27 @@ runs:
       with:
         node-version-file: .nvmrc
 
-    - name: Enable Corepack
-      run: corepack enable
+    - name: Setup Yarn
+      run: |
+        corepack enable
+        corepack prepare yarn@3.6.1 --activate
+      shell: bash
+      
+    - name: Install Yarn plugins
+      run: |
+        mkdir -p .yarn/plugins
+        yarn plugin import @yarnpkg/plugin-interactive-tools
+        yarn plugin import @yarnpkg/plugin-workspace-tools
       shell: bash
 
-    - name: Restore dependencies
-      id: yarn-cache
+    - name: Restore cache
       uses: actions/cache/restore@v4
+      id: yarn-cache
       with:
         path: |
           **/node_modules
+          .yarn/cache
+          .yarn/unplugged
           .yarn/install-state.gz
         key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}-${{ hashFiles('**/package.json', '!node_modules/**') }}
         restore-keys: |
@@ -26,15 +37,16 @@ runs:
           ${{ runner.os }}-yarn-
 
     - name: Install dependencies
-      if: steps.yarn-cache.outputs.cache-hit != 'true'
       run: yarn install --immutable
       shell: bash
 
-    - name: Cache dependencies
-      if: steps.yarn-cache.outputs.cache-hit != 'true'
+    - name: Save cache
       uses: actions/cache/save@v4
+      if: steps.yarn-cache.outputs.cache-hit != 'true'
       with:
         path: |
           **/node_modules
+          .yarn/cache
+          .yarn/unplugged
           .yarn/install-state.gz
-        key: ${{ steps.yarn-cache.outputs.cache-primary-key }}
+        key: ${{ steps.yarn-cache.outputs.cache-primary-key || format('{0}-yarn-{1}-{2}', runner.os, hashFiles('yarn.lock'), hashFiles('**/package.json', '!node_modules/**')) }}
