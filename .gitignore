@@ -63,11 +63,7 @@ android/keystores/debug.keystore
 
 # Yarn
 .yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+.yarnrc.yml
 
 # Expo
 .expo/
