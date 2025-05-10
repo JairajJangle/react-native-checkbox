@@ -52,11 +52,13 @@
   "author": "Jairaj Jangle <reachout.jairaj.jangle@gmail.com> (https://github.com/JairajJangle)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JairajJangle/react-native-checkbox/issues"
+    "url": "https://github.com/JairajJangle/react-native-checkbox/issues",
+    "email": "reachout.jairaj.jangle@gmail.com"
   },
   "homepage": "https://github.com/JairajJangle/react-native-checkbox#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "provenance": true
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^19.6.0",
@@ -150,5 +152,19 @@
     "languages": "js",
     "type": "library",
     "version": "0.50.2"
-  }
+  },
+  "funding": [
+    {
+      "type": "individual",
+      "url": "https://www.paypal.com/paypalme/jairajjangle001/usd"
+    },
+    {
+      "type": "individual",
+      "url": "https://liberapay.com/FutureJJ/donate"
+    },
+    {
+      "type": "individual",
+      "url": "https://ko-fi.com/futurejj"
+    }
+  ]
 }
