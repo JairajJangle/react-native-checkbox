@@ -1,3 +1,3 @@
-import type { CheckboxProps } from "@futurejj/react-native-checkbox";
+import type { CheckboxProps } from '@futurejj/react-native-checkbox';
 
-export type CheckboxStatus = CheckboxProps["status"];
+export type CheckboxStatus = CheckboxProps['status'];

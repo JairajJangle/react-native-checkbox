@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 export function getStyles(size = 24) {
   // Calculate relative dimensions based on size
