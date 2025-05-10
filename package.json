@@ -42,8 +42,25 @@
   },
   "keywords": [
     "react-native",
+    "checkbox",
+    "animated-checkbox",
+    "react-native-component",
+    "ui-component",
+    "cross-platform",
+    "accessibility",
+    "typescript",
+    "expo",
+    "react-native-ui",
+    "mobile-ui",
+    "customizable-checkbox",
+    "animation",
     "ios",
-    "android"
+    "android",
+    "web",
+    "material-design",
+    "form-component",
+    "react-native-paper",
+    "vector-icons"
   ],
   "repository": {
     "type": "git",
