@@ -13,9 +13,9 @@ import {
   animationDuration,
   defaultCheckedColor,
   defaultDisabledColor,
-  defaultUncheckedColor
-} from "./constants";
-import { getStyles } from "./styles";
+  defaultUncheckedColor,
+} from './constants';
+import { getStyles } from './styles';
 
 // Import either Expo or React Native Vector Icons based on availability
 function loadMaterialIcon() {
@@ -26,7 +26,7 @@ function loadMaterialIcon() {
       return require(
         'react-native-vector-icons/MaterialCommunityIcons'
       ).default;
-    } catch (e) {
+    } catch (error) {
       console.error(
         'No icon library found. Please install either @expo/vector-icons or react-native-vector-icons'
       );
@@ -156,9 +156,9 @@ function Checkbox(props: CheckboxProps) {
       </Animated.View>
     </TouchableOpacity>
   );
-};
+}
 
 export {
   Checkbox,
-  type CheckboxProps
+  type CheckboxProps,
 };
