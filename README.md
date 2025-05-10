@@ -85,16 +85,16 @@ export default function CheckboxExample() {
 
 ### Props
 
-| Prop             | Type                                        | Default     | Description                          |
-| ---------------- | ------------------------------------------- | ----------- | ------------------------------------ |
-| `status`         | `'checked' | 'unchecked' | 'indeterminate'` | Required    | Current status of the checkbox       |
-| `disabled`       | `boolean`                                   | `false`     | Whether the checkbox is disabled     |
-| `onPress`        | `(e: GestureResponderEvent) => void`        | Required    | Callback when checkbox is pressed    |
-| `color`          | `string`                                    | `'#2196F3'` | Color of the checkbox when checked   |
-| `uncheckedColor` | `string`                                    | `'#757575'` | Color of the checkbox when unchecked |
-| `size`           | `number`                                    | `24`        | Size of the checkbox icon            |
-| `testID`         | `string`                                    | -           | Test ID for testing frameworks       |
-| `style`          | `StyleProp<ViewStyle>`                      | -           | Additional styles for container      |
+| Prop             | Type                                          | Default     | Description                          |
+| ---------------- | --------------------------------------------- | ----------- | ------------------------------------ |
+| `status`         | `'checked' OR 'unchecked' OR 'indeterminate'` | Required    | Current status of the checkbox       |
+| `disabled`       | `boolean`                                     | `false`     | Whether the checkbox is disabled     |
+| `onPress`        | `(e: GestureResponderEvent) => void`          | Required    | Callback when checkbox is pressed    |
+| `color`          | `string`                                      | `'#2196F3'` | Color of the checkbox when checked   |
+| `uncheckedColor` | `string`                                      | `'#757575'` | Color of the checkbox when unchecked |
+| `size`           | `number`                                      | `24`        | Size of the checkbox icon            |
+| `testID`         | `string`                                      | -           | Test ID for testing frameworks       |
+| `style`          | `StyleProp<ViewStyle>`                        | -           | Additional styles for container      |
 
 ## Animation
 
