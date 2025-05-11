@@ -22,9 +22,9 @@ A beautiful, customizable, and animated checkbox component for React Native appl
 ## Installation
 
 ```bash
-yarn add react-native-animated-checkbox
+yarn add @futurejj/react-native-checkbox
 # or
-npm install react-native-animated-checkbox
+npm install @futurejj/react-native-checkbox
 ```
 
 ### Icon Dependencies
@@ -32,13 +32,7 @@ npm install react-native-animated-checkbox
 This component uses Material Community Icons. You'll need to install either:
 
 - `@expo/vector-icons` (if using Expo - built-in)
-- `react-native-vector-icons` (if using React Native CLI)
-
-```bash
-# For React Native CLI
-npm install react-native-vector-icons
-# Then follow the installation instructions for react-native-vector-icons
-```
+- `react-native-vector-icons` (if using React Native CLI - follow the installation instructions for `react-native-vector-icons`)
 
 ## Usage
 
@@ -47,7 +41,7 @@ npm install react-native-vector-icons
 ```jsx
 import React, { useState } from 'react';
 import { View } from 'react-native';
-import { Checkbox } from 'react-native-animated-checkbox';
+import { Checkbox } from '@futurejj/react-native-checkbox';
 
 export default function CheckboxExample() {
   const [checked, setChecked] = useState(false);
