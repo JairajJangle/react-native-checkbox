@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/JairajJangle/react-native-checkbox/compare/v1.0.1...v1.0.2) (2025-05-11)
+
+
+### Bug Fixes
+
+* replaced old package name in readme ([82cfbf3](https://github.com/JairajJangle/react-native-checkbox/commit/82cfbf3c5d40348b34e9e1e1c8d199e2fe5be2f7))
+
 ## [1.0.1](https://github.com/JairajJangle/react-native-checkbox/compare/v1.0.0...v1.0.1) (2025-05-10)
 
 
