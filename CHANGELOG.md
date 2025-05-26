@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/JairajJangle/react-native-checkbox/compare/v1.0.2...v1.0.3) (2025-05-26)
+
+
+### Bug Fixes
+
+* improper yarn package manager installation for contrib ([46adcb5](https://github.com/JairajJangle/react-native-checkbox/commit/46adcb5a26e3cc7ca398d4c69768e2c8b0933d9b))
+
 ## [1.0.2](https://github.com/JairajJangle/react-native-checkbox/compare/v1.0.1...v1.0.2) (2025-05-11)
 
 
