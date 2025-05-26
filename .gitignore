@@ -64,6 +64,7 @@ android/keystores/debug.keystore
 # Yarn
 .yarn/
 .pnp.*
+.yarnrc.yml
 
 # Expo
 .expo/

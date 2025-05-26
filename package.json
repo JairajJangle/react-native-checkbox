@@ -4,7 +4,6 @@
   "description": "A papery checkbox for react native",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
-  "private": false,
   "exports": {
     ".": {
       "source": "./src/index.tsx",
@@ -120,7 +119,7 @@
   "workspaces": [
     "example"
   ],
-  "packageManager": "yarn@3.6.1",
+  "packageManager": "yarn@4.9.1",
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [
