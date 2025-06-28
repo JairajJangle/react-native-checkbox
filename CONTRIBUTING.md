@@ -6,7 +6,7 @@ We want this community to be friendly and respectful to each other. Please follo
 
 ## Development Workflow
 
-This project is a monorepo managed using [Yarn Workspaces](https://yarnpkg.com/features/workspaces) with Yarn 4.9.1. It contains the following packages:
+This project is a monorepo managed using [Yarn Workspaces](https://yarnpkg.com/features/workspaces) with Yarn 4.9.2. It contains the following packages:
 
 - The library package in the root directory.
 - An example app in the `example/` directory.
@@ -19,17 +19,17 @@ To get started with the project, follow these steps:
    nvm install 22.12.0
    nvm use 22.12.0
 
-2. **Enable Corepack**: Yarn 4.9.1 is managed via Corepack, included with Node.js. Enable it to ensure the correct Yarn version:
+2. **Enable Corepack**: Yarn 4.9.2 is managed via Corepack, included with Node.js. Enable it to ensure the correct Yarn version:
 
    ```sh
    corepack enable
-   corepack prepare yarn@4.9.1 --activate
+   corepack prepare yarn@4.9.2 --activate
    ```
 
-3. Set up Yarn configuration: In the root directory, configure Yarn 4.9.1 and generate the .yarnrc.yml file:
+3. Set up Yarn configuration: In the root directory, configure Yarn 4.9.2 and generate the .yarnrc.yml file:
 
    ```sh
-   yarn set version 4.9.1
+   yarn set version 4.9.2
    yarn config set nodeLinker node-modules
    yarn config set nmHoistingLimits workspaces
    ```
@@ -40,7 +40,7 @@ To get started with the project, follow these steps:
    yarn
    ```
 
-> Important: This project relies on Yarn Workspaces and Yarn 4.9.1. Do not use npm or other package managers for development, as they are not compatible with the monorepo setup.
+> Important: This project relies on Yarn Workspaces and Yarn 4.9.2. Do not use npm or other package managers for development, as they are not compatible with the monorepo setup.
 
 The [example app](/example/) demonstrates usage of the library. You need to run it to test any changes you make.
 
