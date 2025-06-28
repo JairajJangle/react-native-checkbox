@@ -124,7 +124,8 @@ function Checkbox(props: CheckboxProps) {
     <TouchableOpacity
       {...rest}
       {...accessibilityProps}
-      onPress={disabled ? undefined : onPress}
+      disabled={disabled}
+      onPress={onPress}
       style={[styles.container, style]}
       testID={testID}
       activeOpacity={0.7}>
