@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/JairajJangle/react-native-checkbox/compare/v1.0.3...v1.0.4) (2025-06-28)
+
+
+### Bug Fixes
+
+* fixed disabled prop implementation for touchable opacity ([e6ac0cf](https://github.com/JairajJangle/react-native-checkbox/commit/e6ac0cfce6b4fd2c92cecc692a5a360fa5ef48e4))
+
 ## [1.0.3](https://github.com/JairajJangle/react-native-checkbox/compare/v1.0.2...v1.0.3) (2025-05-26)
 
 
