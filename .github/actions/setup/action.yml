@@ -1,5 +1,5 @@
 name: Setup
-description: Setup Node.js, Yarn 4.9.1, and install dependencies
+description: Setup Node.js, Yarn, and install dependencies
 
 runs:
   using: composite
@@ -9,16 +9,16 @@ runs:
       with:
         node-version-file: .nvmrc
 
-    - name: Enable Corepack and Prepare Yarn 4.9.1
+    - name: Enable Corepack and Prepare Yarn
       run: |
         corepack enable
-        corepack prepare yarn@4.9.1 --activate
+        corepack prepare yarn@4.9.2 --activate
         yarn --version
       shell: bash
 
     - name: Configure Yarn and Generate .yarnrc.yml
       run: |
-        yarn set version 4.9.1
+        yarn set version 4.9.2
         yarn config set nodeLinker node-modules
         yarn config set nmHoistingLimits workspaces
       shell: bash
