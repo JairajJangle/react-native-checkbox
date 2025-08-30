@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/JairajJangle/react-native-checkbox/compare/v1.0.4...v1.0.5) (2025-08-15)
+
+
+### Bug Fixes
+
+* multiple deps upgraded ([c05aa5d](https://github.com/JairajJangle/react-native-checkbox/commit/c05aa5dd905d810de13153515176a6e4675bd525))
+
 ## [1.0.4](https://github.com/JairajJangle/react-native-checkbox/compare/v1.0.3...v1.0.4) (2025-06-28)
 
 
