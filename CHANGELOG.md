@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/JairajJangle/react-native-checkbox/compare/v1.0.6...v1.0.7) (2026-04-04)
+
+
+### Bug Fixes
+
+* **deps:** housekeeping - upgraded dep deps ([62268bf](https://github.com/JairajJangle/react-native-checkbox/commit/62268bf0534cad0a40caf06ec79f42d47ab34a94))
+
 ## [1.0.6](https://github.com/JairajJangle/react-native-checkbox/compare/v1.0.5...v1.0.6) (2026-02-07)
 
 
