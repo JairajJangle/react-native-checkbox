@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/JairajJangle/react-native-checkbox/compare/v1.0.7...v1.0.8) (2026-08-18)
+
+
+### Bug Fixes
+
+* **deps:** resolve dependabot security alerts ([0ccd1b0](https://github.com/JairajJangle/react-native-checkbox/commit/0ccd1b0f68a0dc54c7c9581406c53d08851cb7c3))
+
 ## [1.0.7](https://github.com/JairajJangle/react-native-checkbox/compare/v1.0.6...v1.0.7) (2026-04-04)
 
 
