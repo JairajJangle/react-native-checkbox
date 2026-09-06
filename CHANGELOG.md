@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/JairajJangle/react-native-checkbox/compare/v1.0.8...v1.0.9) (2026-09-06)
+
+
+### Bug Fixes
+
+* **deps:** patch xmldom and fast-uri advisories via lockfile refresh ([324890c](https://github.com/JairajJangle/react-native-checkbox/commit/324890c0b3aa4aadf7ac8b079fc899617711e001))
+
 ## [1.0.8](https://github.com/JairajJangle/react-native-checkbox/compare/v1.0.7...v1.0.8) (2026-08-18)
 
 
