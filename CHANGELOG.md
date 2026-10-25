@@ -1,5 +1,9 @@
 ## [1.0.10](https://github.com/JairajJangle/react-native-checkbox/compare/v1.0.9...v1.0.10) (2026-10-25)
 
+### Miscellaneous Chores
+
+* **deps:** patch dependabot security alerts via lockfile refresh ([458df0d](https://github.com/JairajJangle/react-native-checkbox/commit/458df0d77f7f6b62d791939c7e511b0c37584493))
+
 ## [1.0.9](https://github.com/JairajJangle/react-native-checkbox/compare/v1.0.8...v1.0.9) (2026-09-06)
 
 
